@@ -1,0 +1,557 @@
+.courses {
+	overflow: hidden;
+	&__wrapper {
+		padding: 57px 101px 76px 98px;
+		background: $white;
+		box-shadow: 0px 12px 33px rgba(193, 213, 210, 0.33);
+		border-radius: 35px;
+		position: relative;
+	}
+
+	&__line-top {
+		position: absolute;
+		top: 4px;
+		left: -111px;
+		width: 262px;
+		height: 218px;
+		object-fit: cover;
+		z-index: -1;
+	}
+
+	&__line-bottom {
+		position: absolute;
+		bottom: 256px;
+		right: -240px;
+		width: 320px;
+		height: 486px;
+		object-fit: cover;
+		z-index: -1;
+	}
+
+	&__inner {
+		text-align: center;
+		margin-bottom: 29px;
+	}
+
+	&__title {
+		font-weight: $title;
+		font-size: 35px;
+		line-height: 40px;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+
+	&__subtitle {
+		font-weight: $subtitle;
+		font-size: 18px;
+		line-height: 40px;
+		color: $gray;
+		margin-bottom: 5px;
+	}
+
+	&__infinity {
+		width: 39px;
+		height: 19px;
+		object-fit: cover;
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 30px 28px;
+		margin-bottom: 42px;
+	}
+
+	&__item {
+		border-radius: 25px;
+		position: relative;
+		padding: 36px 33px;
+		color: $white;
+		&-wrap {
+			position: relative;
+			z-index: 3;
+		}
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			border-radius: 50%;
+			z-index: 0;
+			right: 48px;
+			top: 22px;
+			background: #fffef1;
+			width: 174px;
+			height: 174px;
+		}
+		&-superbody {
+			color: $main;
+			background: linear-gradient(124.21deg, #f7f6ed 5.16%, #e8e3d4 102.93%);
+			.courses__background {
+				width: 215px;
+				height: 365px;
+			}
+			.courses__description {
+				color: $lgray;
+			}
+			.courses__icon {
+				width: 134px;
+				height: 24px;
+			}
+			.courses__count {
+				color: $lgray;
+			}
+		}
+		&-luxurywoman {
+			background: linear-gradient(125.44deg, #fb9cb0 3.05%, #e46a87 99.03%);
+			&::before {
+				background: #ffb6c6;
+			}
+			.courses__icon {
+				width: 134px;
+				height: 19px;
+			}
+		}
+		&-heart {
+			background: linear-gradient(127.4deg, #9ec6ef 1.57%, #7cc8d9 99.02%);
+			.courses__background {
+				width: 230px;
+				height: 351px;
+			}
+			&::before {
+				background: #d9ecff;
+			}
+			.courses__icon {
+				width: 108px;
+				height: 34px;
+			}
+		}
+		&-makeup {
+			background: linear-gradient(125.91deg, #d9a5e6 3.6%, #955ac4 96.17%);
+			.courses__background {
+				width: 265px;
+				height: 358px;
+			}
+			&::before {
+				background: #fec4ff;
+			}
+			.courses__icon {
+				width: 77px;
+				height: 36px;
+			}
+		}
+	}
+
+	&__background {
+		position: absolute;
+		right: 9px;
+		bottom: 0;
+	}
+
+	&__icon {
+		margin-bottom: 20px;
+		object-fit: cover;
+	}
+
+	&__item-inner {
+		max-width: 209px;
+	}
+
+	&__curse-name {
+		max-width: 220px;
+		font-weight: $title;
+		font-size: 22px;
+		line-height: 30px;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+	}
+
+	&__description {
+		font-weight: $normal;
+		font-size: 12px;
+		line-height: 20px;
+		margin-bottom: 13px;
+	}
+
+	&__rate {
+		display: flex;
+		align-items: center;
+		margin-bottom: 18px;
+	}
+
+	&__stars {
+		display: flex;
+		align-items: center;
+		margin-right: 12px;
+	}
+
+	&__star {
+		width: 19px;
+		height: 19px;
+		object-fit: cover;
+		margin-right: 3px;
+		&:last-child {
+			margin: 0;
+		}
+		&-empty {
+			opacity: 0.4;
+		}
+	}
+
+	&__count {
+		font-weight: $subtitle;
+		font-size: 12px;
+		line-height: 20px;
+	}
+
+	&__more {
+		display: inline-block;
+		border-radius: 10px;
+		padding: 10px 35px;
+		font-weight: $bold;
+		font-size: 13px;
+		line-height: 24px;
+		text-align: center;
+		color: $white;
+		position: relative;
+		text-transform: uppercase;
+		background: rgba($color: $white, $alpha: 0.4);
+		&-black {
+			color: $main;
+		}
+		transition: $transition_normal;
+		&:hover {
+			transform: scale(0.95);
+		}
+	}
+
+	&__soon {
+		display: flex;
+		align-items: center;
+		background: rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(22px);
+		width: 100%;
+		justify-content: center;
+		&:hover {
+			transform: none;
+		}
+	}
+
+	&__shape {
+		width: 12px;
+		height: 16px;
+		object-fit: cover;
+		vertical-align: baseline;
+		margin-right: 16px;
+	}
+
+	&__subgrid {
+		color: $white;
+		background: linear-gradient(91.1deg, #f8a2a2 2.53%, #ffb7a0 100.85%);
+		border-radius: 25px;
+		padding: 7px 11px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		&-left {
+			text-align: right;
+			margin-right: 110px;
+		}
+		&-title {
+			font-weight: $title;
+			font-size: 20px;
+			line-height: 26px;
+			text-transform: uppercase;
+			max-width: 227px;
+			margin-bottom: 5px;
+		}
+		&-wait {
+			padding: 0 10px;
+			display: inline-block;
+			font-weight: $title;
+			background: #9ea8ff;
+			border-radius: 200px;
+			font-size: 14px;
+			line-height: 30px;
+		}
+		&-right {
+			max-width: 500px;
+			position: relative;
+			border: 1px dashed $white;
+			border-radius: 25px;
+			padding: 14px 83px 14px 107px;
+		}
+		&-time {
+			width: 135px;
+			height: 175px;
+			left: -42px;
+			bottom: -20px;
+			position: absolute;
+		}
+		&-newest,
+		&-courses {
+			font-weight: $title;
+			font-size: 42px;
+			line-height: 45px;
+		}
+		&-newest {
+			padding-left: 35px;
+		}
+	}
+	&__more-btn {
+		width: 46px;
+		height: 46px;
+		border: 1px solid #e9eeed;
+		border-radius: 50%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 9px;
+	}
+	&__plus {
+		width: 10px;
+		height: 10px;
+		object-fit: cover;
+	}
+	&__more-content {
+		display: none;
+		&_active {
+			display: block;
+		}
+	}
+	&__more-mob {
+		display: none;
+		&-text {
+			color: $main;
+			font-weight: $bold;
+			font-size: 9px;
+			line-height: 24px;
+			text-align: center;
+		}
+	}
+	@media ($media_lg) {
+		&__line-top {
+			display: none;
+		}
+		&__line-bottom {
+			display: none;
+		}
+		&__wrapper {
+			padding: 57px 20px 76px 20px;
+			box-shadow: none;
+		}
+		&__subgrid {
+			&-title {
+				font-size: 14px;
+				line-height: 20px;
+			}
+			&-newest,
+			&-courses {
+				padding: 0;
+				font-size: 26px;
+				line-height: 45px;
+			}
+			&-time {
+				width: 115px;
+				height: 150px;
+				object-fit: cover;
+			}
+		}
+	}
+	@media ($media_lg3) {
+		&__more-mob {
+			display: block;
+		}
+		&__more-text {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			font-weight: 700;
+			font-size: 9px;
+			line-height: 24px;
+		}
+		&__wrapper {
+			padding: 57px 80px 76px 80px;
+			box-shadow: none;
+		}
+		&__grid {
+			grid-template-columns: 1fr;
+			margin-bottom: 38px;
+		}
+		&__subgrid {
+			padding: 19px 15px 11px 15px;
+			&-wait {
+				font-size: 10px;
+				line-height: 30px;
+			}
+			&-left {
+				margin-right: 70px;
+			}
+			&-right {
+				padding: 14px 24px 14px 58px;
+			}
+			&-time {
+				width: 94px;
+				height: 120px;
+				bottom: 10px;
+			}
+		}
+		&__title {
+			font-size: 20px;
+			line-height: 25px;
+		}
+		&__subtitle {
+			font-size: 15px;
+			line-height: 20px;
+			margin-bottom: 13px;
+		}
+		&__infinity {
+			width: 23px;
+			height: 11px;
+		}
+		&__inner {
+			margin-bottom: 20px;
+		}
+		&__item {
+			overflow: visible;
+			&:nth-child(4) {
+				display: none;
+			}
+		}
+		&__star {
+			width: 15px;
+			height: 15px;
+		}
+		&__item::before {
+			width: 108px;
+			height: 108px;
+		}
+		&__count {
+			font-size: 12px;
+			line-height: 20px;
+		}
+		&__icon {
+			margin-bottom: 15px;
+		}
+		&__more {
+			font-size: 9px;
+			padding: 8px 18px;
+		}
+		&__background {
+			width: 197px;
+			right: -14px;
+		}
+		&__item {
+			&::before {
+				top: 27px;
+				right: 29px;
+			}
+			&-superbody {
+				.courses__icon {
+					width: 100px;
+					height: 18px;
+				}
+			}
+			&-luxurywoman {
+				.courses__icon {
+					width: 134px;
+					height: 19px;
+				}
+			}
+			&-heart {
+				.courses__icon {
+					width: 92px;
+					height: 28px;
+				}
+			}
+			&-makeup {
+				.courses__icon {
+					width: 77px;
+					height: 36px;
+				}
+			}
+		}
+	}
+	@media ($media_md2) {
+		&__subgrid {
+			padding: 19px 25px 11px 25px;
+			flex-wrap: wrap;
+			&-left {
+				margin-right: 110px;
+			}
+			&-right {
+				padding: 0;
+				border: none;
+			}
+			&-wait {
+				font-size: 10px;
+				line-height: 30px;
+			}
+			&-time {
+				width: 96px;
+				height: 125px;
+				object-fit: cover;
+				left: auto;
+				bottom: auto;
+				top: -125px;
+				right: -10px;
+			}
+		}
+		&__wrapper {
+			padding: 57px 60px 76px 60px;
+			box-shadow: none;
+		}
+		&__description {
+			font-size: 12px;
+			line-height: 18px;
+			margin-bottom: 6px;
+		}
+		&__curse-name {
+			font-size: 16px;
+			line-height: 20px;
+			margin-bottom: 10px;
+		}
+	}
+	@media ($media_sm) {
+		&__item {
+			padding: 20px 30px;
+			&-superbody {
+				.courses__background {
+					width: 160px;
+					height: 283px;
+				}
+			}
+			&-luxurywoman {
+				background: linear-gradient(125.44deg, #fb9cb0 3.05%, #e46a87 99.03%);
+			}
+			&-heart {
+				.courses__background {
+					width: 176px;
+					height: 269px;
+					right: -37px;
+				}
+			}
+			&-makeup {
+				.courses__background {
+					width: 233px;
+					height: 290px;
+					right: -30px;
+				}
+			}
+		}
+	}
+	@media ($media_sm2) {
+		&__item-inner {
+			max-width: 165px;
+		}
+		&::before {
+			top: 60px;
+			right: 22px;
+		}
+		&__wrapper {
+			padding: 0;
+			box-shadow: none;
+		}
+	}
+}

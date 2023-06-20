@@ -1,0 +1,27 @@
+@import "fonts";
+@import "components/vars";
+@import "components/mixins";
+@import "components/classes";
+@import "components/normalize";
+
+// reset
+@import "components/reset";
+@import "components/default";
+
+// vendors
+@import "vendor/swiper-bundle";
+@import "vendor/aos";
+
+// blocks
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/first-screen";
+@import "blocks/about";
+@import "blocks/benefits";
+@import "blocks/courses";
+@import "blocks/sides";
+@import "blocks/news-item";
+@import "blocks/news";
+@import "blocks/news-screen";
+@import "blocks/news-content";
+@import "blocks/courses-content";

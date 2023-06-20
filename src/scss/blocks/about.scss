@@ -1,0 +1,153 @@
+.about {
+	&__wrapper {
+		box-shadow: 0px 12px 33px rgba(193, 213, 210, 0.33);
+		border-radius: 35px;
+		padding: 80px 57px 76px 100px;
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+		margin-bottom: 23px;
+		background: $white;
+
+		&::before {
+			content: "";
+			display: block;
+			height: 370px;
+			width: 1386px;
+			position: absolute;
+			top: 50%;
+			left: -88px;
+			z-index: -1;
+			transform: translateY(-50%) rotate(-6.7deg);
+			background: radial-gradient(
+				133.9% 1838.09% at 0% 0%,
+				#41daa3 0%,
+				#bbda41 100%
+			);
+			border-radius: 35px;
+		}
+	}
+
+	&__item-left {
+		text-align: right;
+		max-width: 470px;
+		margin-right: 100px;
+	}
+
+	&__some-title {
+		max-width: 300px;
+		margin-left: auto;
+		font-weight: $title;
+		font-size: 35px;
+		line-height: 40px;
+		text-align: right;
+		text-transform: uppercase;
+		margin-bottom: 39px;
+	}
+
+	&__line {
+		width: 135px;
+		height: 19px;
+		object-fit: cover;
+		position: relative;
+		right: -23px;
+		margin-bottom: 45px;
+	}
+
+	&__img-wrap {
+		border-radius: 20px;
+		overflow: hidden;
+	}
+
+	&__img {
+		width: 100%;
+		object-fit: cover;
+	}
+
+	&__item-right {
+		max-width: 417px;
+	}
+
+	&__title {
+		font-weight: $bold;
+		font-size: 26px;
+		line-height: 33px;
+		margin-bottom: 34px;
+	}
+
+	&__description {
+		font-weight: $normal;
+		font-size: 16px;
+		line-height: 26px;
+		color: $lgray;
+	}
+	&__mobile {
+		display: none;
+	}
+	@media ($media_xxxl) {
+		&__wrapper {
+			&::before {
+				display: none;
+			}
+		}
+	}
+	@media ($media_xl) {
+		&__wrapper {
+			padding: 57px 40px 56px 40px;
+		}
+		&__item-left {
+			margin-right: 70px;
+		}
+	}
+	@media ($media_md2) {
+		&__item-left {
+			max-width: none;
+			width: 100%;
+			margin-right: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		&__item-right {
+			display: none;
+		}
+		&__some-title {
+			margin: 0 auto 23px;
+		}
+		&__line {
+			width: 122px;
+			height: 17px;
+			margin-bottom: 18px;
+		}
+		&__description {
+			display: none;
+		}
+
+		&__wrapper {
+			padding: 30px 27px;
+			flex-wrap: wrap;
+			box-shadow: 0px 7px 26px rgba(193, 213, 210, 0.33);
+			border-radius: 35px;
+			&::before {
+				display: none;
+			}
+		}
+		&__mobile {
+			text-align: left;
+			display: block;
+			.about__description {
+				display: block;
+				margin-bottom: 35px;
+			}
+		}
+		&__title {
+			font-size: 16px;
+			line-height: 22px;
+			margin-bottom: 6px;
+		}
+		&__some-title {
+			font-size: 20px;
+			line-height: 25px;
+		}
+	}
+}
